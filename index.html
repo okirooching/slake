@@ -8,6 +8,9 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="styles.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet"/>
+
     <title>Slake</title>
   </head>
   <body>
@@ -34,16 +37,129 @@
                 <p>"To your Doorstep"</p>
             </div>
         </div>
-        <div class="row">
-            <div class="col-12">
 
+        <div id="place_order" class="row">
+            <div class="col-12">
+                <p>Place an order</p>
+            </div>
+        </div>
+
+        <div id="get_location" class="row">
+            <div class="col-1">
+                <i class="bi bi-geo-alt-fill"></i>
+            </div>
+            <div class="col-11">
+                <p>Delivery location</p>
+            </div>
+            <div class="col-4">
+                <input type="text" class="form-control" placeholder="lat..">
+            </div>
+            <div class="col-4">
+                <input type="text" class="form-control" placeholder="long..">
+            </div>
+            <div class="col-4">
+                <button type="button" class="btn btn-primary">Get</button>
+            </div>
+            <br>
+            <br>
+            <div class="col-6">
+                <input type="text" class="form-control" placeholder="Hse No.">
+            </div>
+            <div class="col-6">
+                <input type="text" class="form-control" placeholder="Flr No.">
             </div>
 
+            <div id="delivery_map" class="col-12">
+                <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.053182457064!2d-122.41941528468106!3d37.77492927975998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085809c77e68a3d%3A0x93c3b2d7f6d7d54b!2sSan%20Francisco%2C%20CA!5e0!3m2!1sen!2sus!4v1615908817939!5m2!1sen!2sus"
+                width="100%"
+                height="400"
+                style="border:0;"
+                allowfullscreen=""
+                loading="lazy"
+              ></iframe>
+            </div>
         </div>
+        
+        <div class="row">
+            <div class="col-1">
+                <i class="bi bi-person-circle"></i>
+            </div>
+            <div class="col-11">
+                <p>Water Recipient's Name</p>
+            </div>
+            <div class="col-12">
+                <input type="text" class="form-control" placeholder="person receiving the water">
+            </div>
+        </div>
+        
+
+
+        <div class="row">
+            <div class="col-1">
+                <i class="bi bi-telephone-fill"></i>
+            </div>
+            <div class="col-11">
+                <p>Recipient Phone Number</p>
+            </div>
+            <div class="col-12">
+                <input type="text" class="form-control" placeholder="person receiving the water">
+            </div>
+        </div>
+
+
+
+        <div class="row">
+            <div class="col-1">
+                <i class="bi bi-database-fill"></i>
+            </div>
+            <div class="col-11">
+                <p>Water Quantity</p>
+            </div>
+            <div class="col-12">
+                <select class="form-select" id="waterSize">
+                  <option selected>Choose...</option>
+                  <option value="1">5 Liters</option>
+                  <option value="2">10 Liters</option>
+                  <option value="3">20 Liters</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="row">
+                <div class="d-grid gap-2">
+                    <button class="btn btn-primary" type="button">
+                        <i class="bi bi-truck"></i> Place Order
+
+                    </button>
+                  </div>
+            </div>
+        </div>
+
+        <div id="after_sale" class="row">
+            <div class="col-6 text-center">
+                <i class="bi bi-clock"></i>
+                <p>Track Order</p>
+            </div>
+            <div class="col-6 text-center">
+                <i class="bi bi-telephone-fill"></i>
+                <p>Call Support</p>
+            </div>
+        </div>
+
+
+
+
+
+
+
     </div>
 
 
-
+    <footer class="py-3 my-4">
+        <p class="text-center text-body-secondary">© 2025 Slake Purified Drinking Water, Ltd</p>
+    </footer>
 
     <!-- Optional JavaScript; choose one of the two! -->
 
